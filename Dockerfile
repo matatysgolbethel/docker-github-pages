@@ -7,7 +7,8 @@ WORKDIR /usr/src/app
 
 RUN gem install --no-document \
   github-pages:${GITHUB_GEM_VERSION} \
-  jekyll-github-metadata
+  jekyll-github-metadata \
+  RedCloth
 
 EXPOSE 4000
 CMD jekyll serve -d /_site --watch --force_polling -H 0.0.0.0 -P 4000
